@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personagem UI</title>
+</head>
+<body>
+    <h1>Status do personagem RPG:</h1>
+    <div th:switch="${personagem.classe}">
+        <h2 th:case="'Guerreiro'">Nome: [[${personagem.nome}]] ⚔️ <br>Classe: [[${personagem.classe}]] ⚔️</h2>
+        <h2 th:case="'Mago'">Nome: [[${personagem.nome}]] 🧙<br>Classe: [[${personagem.classe}]] 🧙️</h2>
+        <h2 th:case="'Arqueiro'">Nome: [[${personagem.nome}]] 🏹 <br>Classe: [[${personagem.classe}]]  🏹</h2>
+    </div>
+
+    <!-- TODO: IMPLEMENTAR CSS-->
+
+    <h2 th:if="${personagem.nivel >= 15}">NIVEL [[${personagem.nivel}]]: NOVO PODER DESBLOQUEADO! </h2>
+    <h2 th:if="${personagem.vida <= 30}">[[${personagem.vida}]]% DE VIDA: PERIGO! CURE-SE! </h2>
+    <h2 th:if="${personagem.premium}">MEMBRO PREMIUM 💎</h2>
+</body>
+</html>

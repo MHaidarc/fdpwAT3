@@ -4,6 +4,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import java.util.Random;
+
 @Controller
 public class ObjetoController {
 
@@ -32,5 +34,16 @@ public class ObjetoController {
         model.addAttribute("rs", rs);
 
         return "table.html";
+    }
+
+    Random r = new Random();
+
+    @GetMapping("/personagem") 
+    public String personagem(Model model) {
+
+        Personagem personagem = new Personagem("Cavaleiro da Lua", r.nextInt(21), "Mago", r.nextInt(101), true);
+        model.addAttribute(personagem);
+
+        return "personagem.html";
     }
 }
