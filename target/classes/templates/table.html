@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lojinha de vinil</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bem vinde à minha lojinha de discos de vinil!</h1>
+    <h2>Verifique os discos que temos em estoque:</h2>
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Preço</th>
+        </tr>
+        <tr>
+            <th th:text="${tbk.name}">Nome do disco</th>
+            <th th:text="${tbk.description}">Descrição do disco</th>
+            <th th:text="${tbk.price}">Preço do disco</th>
+        </tr>
+        <tr>
+            <th th:text="${tvo.name}">Nome do disco</th>
+            <th th:text="${tvo.description}">Descrição do disco</th>
+            <th th:text="${tvo.price}">Preço do disco</th>
+        </tr>
+        <tr>
+            <th th:text="${adc.name}">Nome do disco</th>
+            <th th:text="${adc.description}">Descrição do disco</th>
+            <th th:text="${adc.price}">Preço do disco</th>
+        </tr>
+        <tr>
+            <th th:text="${cd.name}">Nome do disco</th>
+            <th th:text="${cd.description}">Descrição do disco</th>
+            <th th:text="${cd.price}">Preço do disco</th>
+        </tr>
+        <tr>
+            <th th:text="${rs.name}">Nome do disco</th>
+            <th th:text="${rs.description}">Descrição do disco</th>
+            <th th:text="${rs.price}">Preço do disco</th>
+        </tr>
+    </table>
+</body>
+</html>
