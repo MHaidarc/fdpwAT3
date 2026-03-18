@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personagem UI</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
     <h1>Status do personagem RPG:</h1>
@@ -14,6 +15,10 @@
     </div>
 
     <!-- TODO: IMPLEMENTAR CSS-->
+     <div class="healthbar_out">
+        <div class="healthbar" th:classappend="${personagem.vida <= 20 ? 'baixa' : personagem.vida <= 50 ? 'media' : 'alta'}">
+        </div>
+     </div>
 
     <h2 th:if="${personagem.nivel >= 15}">NIVEL [[${personagem.nivel}]]: NOVO PODER DESBLOQUEADO! </h2>
     <h2 th:if="${personagem.vida <= 30}">[[${personagem.vida}]]% DE VIDA: PERIGO! CURE-SE! </h2>

@@ -1,0 +1,22 @@
+body {
+    background-color: #f0f8ff; /* Um tom de azul claro */
+}
+.healthbar_out {
+    border:solid;
+    border-radius: 1px;
+}
+.healthbar {
+    border:solid;
+    border-radius: 1px;
+    margin:5px;
+    height:100px;
+}
+.baixa {
+    background-color: red;
+}
+.media {
+    background-color: yellow;
+}
+.alta {
+    background-color: green;
+}
